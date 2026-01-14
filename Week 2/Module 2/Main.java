@@ -52,7 +52,7 @@ final double MIN_GPA = 0;
      // STEP 5: Nested if example
     void checkProgram() {
         // TODO: Nested if for program and GPA
-        if(program.equalsIgnoreCase(" computer science")){//ignores differences in upper case and lower case while comparing
+        if(program.equalsIgnoreCase(" computer science")){ //ignores differences in upper case and lower case while comparing
              if(gpa >= 3.5){
                 System.out.println(name + " is eligble for CS scholarship");
              } else{
@@ -96,18 +96,53 @@ final double MIN_GPA = 0;
         }
         System.out.println();
     }
- 
+ //step 7.1 do while loop
+ void enterGPAs(){
+    Scanner input = new Scanner(System.in);
+    double gpaInput;
+    do{
+        System.out.println("enter semester GPA press - 1 to stop");
+        gpaInput = input.nextDouble();
+        if(gpaInput != -1){
+            System.out.println("recorded GPA : " + gpaInput);
+        }
+    }while(gpaInput != -1);
+        System.out.println("all semesters gpa are recorded");
+ }
  
     // STEP 8: For loop example
     void printMultiplesOfID() {
         // TODO: Use for loop to print multiples of ID
-        
+        for (int i =1; i <= 5; i++){
+            System.out.println(id * i + " ");
+        }
+        System.out.println();
     }
- 
+ //step 8.1 enchance for loop: used to loop through arrays and objections easily
+ ///for(dataType variable : arrayName){}
+     void printSemesterGPA(){
+        double[] semesterGPA = {3.0,3.5,3.7};
+        System.out.println("Semester gpas");
+        for(double g : semesterGPA){
+            System.err.print(g + " ");
+        }
+        System.out.println();
+    }   
+
  
     // STEP 9: Increment / Decrement / Compound assignment example
     void updateGPA() {
         // TODO: Demonstrate ++, --, +=, -= with GPA
+        System.err.println("original GPA:" + gpa);
+        gpa++;//gpa=gpa +1
+        System.out.println("Updated GPA-after incrementy" + gpa);
+        gpa += 0.5;
+        System.out.println("Updated GPA-after compund addition assignment" + gpa);
+        gpa--;
+        System.out.println("Updated GPA-after decrement" + gpa);4
+        gpa =- 0.2;
+        System.out.println("Updated GPA-after decrement assignment" + gpa);
+
     }
 }
  
@@ -140,6 +175,10 @@ public class Main {
       s1.checkProgram();
       s1.gradeDescription();
       s1.printNumbersUpToGPA();
+      s1.printMultiplesOfID();
+      s1.printSemesterGPA();
+      s1.enterGPAs();
+      s1.updateGPA();
     }
 }
  
