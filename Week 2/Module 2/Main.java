@@ -139,7 +139,7 @@ final double MIN_GPA = 0;
         gpa += 0.5;
         System.out.println("Updated GPA-after compund addition assignment" + gpa);
         gpa--;
-        System.out.println("Updated GPA-after decrement" + gpa);4
+        System.out.println("Updated GPA-after decrement" + gpa);
         gpa =- 0.2;
         System.out.println("Updated GPA-after decrement assignment" + gpa);
 

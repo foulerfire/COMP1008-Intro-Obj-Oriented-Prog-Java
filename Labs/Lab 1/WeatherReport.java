@@ -8,7 +8,7 @@ import java.util.Scanner;
 */
  
  
-public class Main {
+public class WeatherReport {
     public static void main(String[] args) {
  
  
@@ -24,10 +24,16 @@ public class Main {
         e) Daily low temperature (int or double)
         f) UV index (int)
         */
+
  
  
         // TODO: Declare your variables here
- 
+    String dailyWeather;
+    String precipChance;
+    String windSpeed;
+    double highTemp;
+    double lowTemp;
+    int uvIndex;
  
         /*
         STEP 2: Get input from the user using Scanner
