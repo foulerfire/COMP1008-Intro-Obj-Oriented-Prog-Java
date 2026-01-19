@@ -41,8 +41,16 @@ public class WeatherReport {
         - Validate numeric input using loops
         - Example: Ensure highTemp >= lowTemp
         */
- 
- 
+    System.out.print("Enter the daily weather: ");
+    dailyWeather = input.nextLine(); //get input and assign to dailyWeather variable
+            
+    System.out.print("Enter chance of precipitation: ");
+    precipChance = input.nextLine(); //get input and assign to precipChance variable
+    
+    System.out.print("Enter the daily windspeed: ");
+    windSpeed = input.nextLine(); //get input and assign to windSpeed variable
+
+
         // TODO: Prompt user and read input
         // TODO: Use loops to validate high/low temperatures and UV index
  
