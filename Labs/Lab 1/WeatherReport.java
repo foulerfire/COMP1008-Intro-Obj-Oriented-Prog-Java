@@ -78,7 +78,7 @@ public class WeatherReport {
 
     while (true) { 
         System.out.print("Enter daily UV Index");
-        if(input.hasNextDouble()){
+        if(input.hasNextInt()){
             uvIndex = input.nextInt();
             input.nextLine();
             break;
@@ -87,6 +87,7 @@ public class WeatherReport {
             System.out.println("Sorry you did not enter a number, please try again");
             input.nextLine();
         }
+         input.close();
     }
         // TODO: Prompt user and read input
         // TODO: Use loops to validate high/low temperatures and UV index
@@ -141,7 +142,7 @@ public class WeatherReport {
         // TODO: Implement loop for multiple reports
  
  
-        input.close();
+       
     }
 }
  
