@@ -104,7 +104,7 @@ final double MIN_GPA = 0;
         System.out.println("enter semester GPA press - 1 to stop");
         gpaInput = input.nextDouble();
         if(gpaInput != -1){
-            System.out.println("recorded GPA : " + gpaInput);
+            System.out.priftln("recorded GPA : " + gpaInput);
         }
     }while(gpaInput != -1);
         System.out.println("all semesters gpa are recorded");
