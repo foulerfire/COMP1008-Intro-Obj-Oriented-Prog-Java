@@ -10,11 +10,11 @@ import java.util.Scanner;
  
 public class WeatherReport {
     public static void main(String[] args) {
- 
- 
+
+
         Scanner input = new Scanner(System.in);
- 
- 
+
+
         /*
         STEP 1: Declare variables for weather information
         a) Today's weather conditions (String)
@@ -25,8 +25,8 @@ public class WeatherReport {
         f) UV index (int)
         */
 
- 
- 
+
+
         // TODO: Declare your variables here
     String dailyWeather;
     String precipChance;
@@ -50,7 +50,44 @@ public class WeatherReport {
     System.out.print("Enter the daily windspeed: ");
     windSpeed = input.nextLine(); //get input and assign to windSpeed variable
 
+    while (true) { 
+        System.out.print("Enter daily High temperature");
+        if(input.hasNextDouble()){
+            highTemp = input.nextDouble();
+            input.nextLine();
+            break;
+        }
+        else{
+            System.out.println("Sorry you did not enter a number, please try again");
+            input.nextLine();
+        }
+    }
 
+    while (true) { 
+        System.out.print("Enter daily Low temperature");
+        if(input.hasNextDouble()){
+            lowTemp = input.nextDouble();
+            input.nextLine();
+            break;
+        }
+        else{
+            System.out.println("Sorry you did not enter a number, please try again");
+            input.nextLine();
+        }
+    }
+
+    while (true) { 
+        System.out.print("Enter daily UV Index");
+        if(input.hasNextDouble()){
+            uvIndex = input.nextInt();
+            input.nextLine();
+            break;
+        }
+        else{
+            System.out.println("Sorry you did not enter a number, please try again");
+            input.nextLine();
+        }
+    }
         // TODO: Prompt user and read input
         // TODO: Use loops to validate high/low temperatures and UV index
  
