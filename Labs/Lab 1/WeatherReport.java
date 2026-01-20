@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class WeatherReport {
     public static void main(String[] args) {
 
-    Scanner input = new Scanner(System.in);
-
+    Scanner input = new Scanner(System.in);//scanner to read input 
+    //declared variables
     String dailyWeather;
     String precipChance;
     String windSpeed;
     double highTemp;
     double lowTemp;
     int uvIndex;
-
+    // ask user for string inputs
     System.out.print("Enter the daily weather: ");
     dailyWeather = input.nextLine(); //get input and assign to dailyWeather variable
             
@@ -21,6 +21,8 @@ public class WeatherReport {
     System.out.print("Enter the daily windspeed: ");
     windSpeed = input.nextLine(); //get input and assign to windSpeed variable
 
+    // loop keeps running until user enters valid double number
+    //high temperature loop
     while (true) { 
         System.out.print("Enter daily High temperature");
         if(input.hasNextDouble()){
@@ -33,7 +35,7 @@ public class WeatherReport {
             input.nextLine();
         }
     }
-
+    //low temp loop
     while (true) { 
         System.out.print("Enter daily Low temperature");
         if(input.hasNextDouble()){
@@ -46,7 +48,7 @@ public class WeatherReport {
             input.nextLine();
         }
     }
-
+    //uv index loop
     while (true) { 
         System.out.print("Enter daily UV Index");
         if(input.hasNextInt()){
@@ -60,12 +62,12 @@ public class WeatherReport {
         }
          input.close();
     }
- 
+        //convert double to integer
         int highAsInt = (int) highTemp;
         int lowAsInt = (int) lowTemp;
  
         String uvTip;
-
+        // if else to give user tip depending on uvindex input
         if (uvIndex >= 6) {
             uvTip = "Use sunscreen!";
         }
@@ -75,7 +77,7 @@ public class WeatherReport {
         else {
             uvTip = "UV is low.";
         }
- 
+        //weather report output 
         String fullReport =
         "\n--- Weather Report ---\n" +
         "Weather: " + dailyWeather + "\n" +
