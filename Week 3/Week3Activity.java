@@ -1,6 +1,5 @@
 import java.util.Scanner;
- 
- 
+
 /*
     Week 3 Comprehensive Program: Methods, Logical Operators & Enums
     Covers:
@@ -12,85 +11,95 @@ import java.util.Scanner;
     - Using return values
     - Enum types
 */
- 
- 
+
 public class Week3Activity {
- 
- 
+
     // STEP 0: Enum for Days (or Game Choices)
     enum Choice {
         ROCK, PAPER, SCISSORS
     }
- 
- 
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
- 
- 
+
         System.out.println("==== Week 3: Methods, Logical Operators & Enums Demo ====");
- 
- 
+
         // STEP 1: Call a method to greet the user
-        // Example: greetUser();
- 
- 
-        // STEP 2: Call a method that adds two numbers and returns the sum
-        // Example: addNumbers(?, ?);
- 
- 
-        // STEP 3: Call a method that multiplies two numbers and returns the product
-        // Example: multiplyNumbers(?, ?);
- 
- 
-        // STEP 4: Call a method that checks if a number is positive and even using logical operators
-        // Example: isPositiveAndEven(?);
- 
- 
-        // STEP 5: Call overloaded methods (same name, different parameters)
-        // Example: displayInfo();
-        // Example: displayInfo("John");
-        // Example: displayInfo("John", 25);
- 
- 
+        greetUser();
+
+        // STEP 2: Call a method that adds two numbers
+        int sum = addNumbers(5, 7);
+        System.out.println("Sum: " + sum);
+
+        // STEP 3: Call a method that multiplies two numbers
+        int product = multiplyNumbers(4, 6);
+        System.out.println("Product: " + product);
+
+        // STEP 4: Check if a number is positive and even
+        boolean result = isPositiveAndEven(10);
+        System.out.println("Is 10 positive and even? " + result);
+
+        // STEP 5: Call overloaded methods
+        displayInfo();
+        displayInfo("John");
+        displayInfo("John", 25);
+
         // STEP 6: Enum usage demo
-        // Example: Choice userChoice = Choice.ROCK;
-        // Example: Choice computerChoice = Choice.SCISSORS;
- 
- 
-        // STEP 7: Method call stack demo by calling other methods
-        // Example: sumAndMultiply(?, ?);
- 
- 
+        Choice userChoice = Choice.ROCK;
+        Choice computerChoice = Choice.SCISSORS;
+
+        showChoice(userChoice);
+        showChoice(computerChoice);
+
+        // STEP 7: Method call stack demo
+        int finalResult = sumAndMultiply(3, 5);
+        System.out.println("Sum and Multiply Result: " + finalResult);
+
         scanner.close();
     }
- 
- 
-    // STEP 1: Create a method to greet the user
-    // public static void greetUser() { ... }
- 
- 
-    // STEP 2: Create a method to add two numbers and return the sum
-    // public static int addNumbers(int a, int b) { ... }
- 
- 
-    // STEP 3: Create a method to multiply two numbers and return the product
-    // public static int multiplyNumbers(int x, int y) { ... }
- 
- 
-    // STEP 4: Create a method to check if number is positive and even using logical operators
-    // public static boolean isPositiveAndEven(int n) { ... }
- 
- 
-    // STEP 5: Create overloaded methods to display info
-    // public static void displayInfo() { ... }
-    // public static void displayInfo(String name) { ... }
-    // public static void displayInfo(String name, int age) { ... }
- 
- 
-    // STEP 6: Method that uses enum (simulate game choice)
-    // public static void showChoice(Choice choice) { ... }
- 
- 
-    // STEP 7: Create a method that calls other methods (for method call stack demo)
-    // public static int sumAndMultiply(int a, int b) { ... }
+
+    // STEP 1: Method to greet the user
+    public static void greetUser() {
+        System.out.println("Welcome! Let's explore methods and enums.");
+    }
+
+    // STEP 2: Method to add two numbers
+    public static int addNumbers(int a, int b) {
+        return a + b;
+    }
+
+    // STEP 3: Method to multiply two numbers
+    public static int multiplyNumbers(int x, int y) {
+        return x * y;
+    }
+
+    // STEP 4: Check if number is positive and even
+    public static boolean isPositiveAndEven(int n) {
+        return n > 0 && n % 2 == 0;
+    }
+
+    // STEP 5: Overloaded methods
+    public static void displayInfo() {
+        System.out.println("No information provided.");
+    }
+
+    public static void displayInfo(String name) {
+        System.out.println("Name: " + name);
+    }
+
+    public static void displayInfo(String name, int age) {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+
+    // STEP 6: Method using enum
+    public static void showChoice(Choice choice) {
+        System.out.println("Choice selected: " + choice);
+    }
+
+    // STEP 7: Method calling other methods (call stack demo)
+    public static int sumAndMultiply(int a, int b) {
+        int sum = addNumbers(a, b);
+        int product = multiplyNumbers(a, b);
+        return sum + product;
+    }
 }
