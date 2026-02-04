@@ -14,6 +14,13 @@ public class Lab4 {
         // ================================================
         String[] groceries = {
             // TODO: Fill in your grocery items
+            "Oranges",
+            "Cheese",
+            "Milk",
+            "Eggs",
+            "Bread",
+            "Apples"
+
         };
  
  
