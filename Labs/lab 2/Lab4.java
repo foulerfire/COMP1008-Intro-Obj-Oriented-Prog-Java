@@ -27,7 +27,8 @@ public class Lab4 {
         // ================================================
         // STEP 2: Print the array using Arrays.toString()
         // ================================================
-       
+        System.out.println("Grocery Array:");
+        System.out.println(Arrays.toString(groceries));
  
  
         // ================================================
