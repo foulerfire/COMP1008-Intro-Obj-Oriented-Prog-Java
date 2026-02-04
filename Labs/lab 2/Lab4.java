@@ -1,3 +1,6 @@
+//Matt Wilhelm
+//COMP1008
+
 import java.util.ArrayList;
 import java.util.Arrays;
  
@@ -75,11 +78,10 @@ public class Lab4 {
                 }
         }
  
- 
-        // ================================================
+         // ================================================
         // STEP 6: Print the final results
         // ================================================
-        
+        System.out.println("\nNumber of items starting with a vowel: " + vowelCount);
  
     }
 }
