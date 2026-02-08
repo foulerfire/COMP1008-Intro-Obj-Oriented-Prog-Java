@@ -7,12 +7,13 @@ public class CommissionEmployee extends Employee {
     public CommissionEmployee(String firstName, String lastName, String ssn, double grossSales, double commissionRate) 
     {
         super(firstName, lastName, ssn);
-
-        if (grossSales >= 0) {
+        if (grossSales >= 0) 
+        {
             this.grossSales = grossSales;
         }
 
-        if (commissionRate > 0 && commissionRate < 1) {
+        if (commissionRate > 0 && commissionRate < 1) 
+        {
             this.commissionRate = commissionRate;
         }
     }
@@ -20,6 +21,26 @@ public class CommissionEmployee extends Employee {
     public double getGrossSales() 
     {
         return grossSales;
+    }
+    public void setGrossSales(double grossSales) 
+    {
+        if (grossSales >= 0) 
+        {
+            this.grossSales = grossSales;
+        }
+    }
+
+    public double getCommissionRate() 
+    {
+        return commissionRate;
+    }
+
+    public void setCommissionRate(double commissionRate) 
+    {
+        if (commissionRate > 0 && commissionRate < 1) 
+        {
+            this.commissionRate = commissionRate;
+        }
     }
     // TODO 7: Override earnings()
  
