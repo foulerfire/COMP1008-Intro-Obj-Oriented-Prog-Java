@@ -43,7 +43,10 @@ public class CommissionEmployee extends Employee {
         }
     }
     // TODO 7: Override earnings()
- 
+     @Override
+    public double earnings() {
+        return grossSales * commissionRate;
+    }
     // TODO 8: Override toString()
 }
  
