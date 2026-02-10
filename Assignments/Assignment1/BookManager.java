@@ -54,6 +54,16 @@ public class BookManager
                     }
                     break;
 
+                case 3:
+                    for (Book b : books) 
+                    {
+                        if (b.isAvailable()) 
+                        {
+                            b.displayInfo();
+                        }
+                    }
+                    break;
+
                 case 7:
                     System.out.println("Exiting program.");
                     break;
