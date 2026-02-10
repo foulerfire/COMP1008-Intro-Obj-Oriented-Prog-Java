@@ -77,6 +77,19 @@ public class BookManager
                     }
                     break;
 
+                    case 5:
+                    System.out.print("Enter ISBN to check out: ");
+                    String checkoutIsbn = input.nextLine();
+
+                    for (Book b : books) {
+                        if (b.getIsbn().equals(checkoutIsbn) && b.isAvailable()) 
+                        {
+                            b.setAvailable(false);
+                            System.out.println("Book checked out.");
+                        }
+                    }
+                    break;
+
                     case 7:
                     System.out.println("Exiting program.");
                     break;
