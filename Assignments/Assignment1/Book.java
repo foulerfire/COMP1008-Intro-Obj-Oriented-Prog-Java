@@ -19,7 +19,7 @@ public class Book
         setIsbn(isbn);
         available = true;
     }
-
+    //getters
     public String getTitle() 
     {
         return title;
@@ -38,5 +38,34 @@ public class Book
     public boolean isAvailable() 
     {
         return available;
+    }
+    //setters
+    public void setTitle(String title) 
+    {
+        if (!title.equals("")) 
+        {
+            this.title = title;
+        }
+    }
+
+    public void setAuthor(String author) 
+    {
+        if (!author.equals("")) 
+        {
+            this.author = author;
+        }
+    }
+
+    public void setIsbn(String isbn) 
+    {
+        if (isbn.length() == 10 || isbn.length() == 13) 
+        {
+            this.isbn = isbn;
+        }
+    }
+
+    public void setAvailable(boolean available) 
+    {
+        this.available = available;
     }
 }
