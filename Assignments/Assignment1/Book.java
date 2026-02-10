@@ -19,4 +19,24 @@ public class Book
         setIsbn(isbn);
         available = true;
     }
+
+    public String getTitle() 
+    {
+        return title;
+    }
+
+    public String getAuthor() 
+    {
+        return author;
+    }
+
+    public String getIsbn() 
+    {
+        return isbn;
+    }
+
+    public boolean isAvailable() 
+    {
+        return available;
+    }
 }
