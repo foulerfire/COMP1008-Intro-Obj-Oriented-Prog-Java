@@ -64,7 +64,20 @@ public class BookManager
                     }
                     break;
 
-                case 7:
+                    case 4:
+                    System.out.print("Enter author name: ");
+                    String searchAuthor = input.nextLine();
+
+                    for (Book b : books) 
+                    {
+                        if (b.getAuthor().equalsIgnoreCase(searchAuthor)) 
+                        {
+                            b.displayInfo();
+                        }
+                    }
+                    break;
+
+                    case 7:
                     System.out.println("Exiting program.");
                     break;
             }
