@@ -46,6 +46,13 @@ public class BookManager
 
                     System.out.println("Book added.");
                     break;
+                
+                case 2:
+                    for (Book b : books) 
+                    {
+                        b.displayInfo();
+                    }
+                    break;
 
                 case 7:
                     System.out.println("Exiting program.");
