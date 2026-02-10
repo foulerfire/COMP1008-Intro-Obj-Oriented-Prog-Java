@@ -91,6 +91,20 @@ public class BookManager
                     }
                     break;
 
+                    case 6:
+                    System.out.print("Enter ISBN to return: ");
+                    String returnIsbn = input.nextLine();
+
+                    for (Book b : books) 
+                    {
+                        if (b.getIsbn().equals(returnIsbn) && !b.isAvailable()) 
+                        {
+                            b.setAvailable(true);
+                            System.out.println("Book returned.");
+                        }
+                    }
+                    break;
+
                     case 7:
                     System.out.println("Exiting program.");
                     break;
