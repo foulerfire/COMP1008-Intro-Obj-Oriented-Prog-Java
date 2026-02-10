@@ -68,7 +68,7 @@ public class Book
     {
         this.available = available;
     }
-
+    //display all info
     public void displayInfo() 
     {
         System.out.println("----------------------");
