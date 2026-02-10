@@ -12,4 +12,11 @@ public class Book
         isbn = "0000000000";
         available = true;
     }
+    public Book(String title, String author, String isbn) 
+    {
+        setTitle(title);
+        setAuthor(author);
+        setIsbn(isbn);
+        available = true;
+    }
 }
