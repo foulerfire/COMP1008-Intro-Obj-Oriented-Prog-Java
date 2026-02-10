@@ -81,7 +81,8 @@ public class BookManager
                     System.out.print("Enter ISBN to check out: ");
                     String checkoutIsbn = input.nextLine();
 
-                    for (Book b : books) {
+                    for (Book b : books) 
+                    {
                         if (b.getIsbn().equals(checkoutIsbn) && b.isAvailable()) 
                         {
                             b.setAvailable(false);
