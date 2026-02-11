@@ -1,3 +1,6 @@
+// Assignment 1 - Book Manager
+// Matt Wilhelm - 200165243
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

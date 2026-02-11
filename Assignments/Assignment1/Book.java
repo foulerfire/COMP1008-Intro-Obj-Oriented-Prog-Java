@@ -1,3 +1,5 @@
+// Assignment 1 - Book Manager
+// Matt Wilhelm - 200165243
 public class Book 
 {
     // private fields for encapsulation
