@@ -1,10 +1,11 @@
 public class Book 
 {
+    // private fields for encapsulation
     private String title;
     private String author;
     private String isbn;
     private boolean available;
-    
+    // default constructor for book
     public Book() 
     {
         title = "Unknown";
@@ -12,6 +13,8 @@ public class Book
         isbn = "0000000000";
         available = true;
     }
+    
+    // parameterized constructor so validation applied
     public Book(String title, String author, String isbn) 
     {
         setTitle(title);
@@ -19,7 +22,7 @@ public class Book
         setIsbn(isbn);
         available = true;
     }
-    //getters
+    //getters for all fields
     public String getTitle() 
     {
         return title;
@@ -39,7 +42,7 @@ public class Book
     {
         return available;
     }
-    //setters
+    //setters for daata control
     public void setTitle(String title) 
     {
         if (!title.equals("")) 
@@ -47,7 +50,7 @@ public class Book
             this.title = title;
         }
     }
-
+    // checks that author name isn't empty before setting
     public void setAuthor(String author) 
     {
         if (!author.equals("")) 
@@ -55,7 +58,7 @@ public class Book
             this.author = author;
         }
     }
-
+    // isbn must be 10 or 13 characters long
     public void setIsbn(String isbn) 
     {
         if (isbn.length() == 10 || isbn.length() == 13) 
@@ -63,12 +66,12 @@ public class Book
             this.isbn = isbn;
         }
     }
-
+    // used when checking out or returning a book
     public void setAvailable(boolean available) 
     {
         this.available = available;
     }
-    //display all info
+    //display all book info
     public void displayInfo() 
     {
         System.out.println("----------------------");
