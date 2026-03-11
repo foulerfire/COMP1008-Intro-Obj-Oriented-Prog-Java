@@ -120,6 +120,26 @@ public static void main(String[] args) {
         }
 
 
+        // pattern and matcher
+    
+        // string with numbers inside
+        String text = "Invoice number is 4567 and total is 890";
+
+        // find digits
+        Pattern pattern = Pattern.compile("\\d+");
+
+        Matcher matcher = pattern.matcher(text);
+
+        System.out.println("Numbers found:");
+
+        // loop through matches
+        while (matcher.find()) {
+            System.out.println(matcher.group());
+        }
+
+        scanner.close();
+    }
+}
 
 
     }
