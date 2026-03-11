@@ -52,4 +52,63 @@ public static void main(String[] args) {
             }
         }
 
-        
+        // email validation
+
+        // ask user to enter email
+        String email;
+
+        while (true) {
+
+            System.out.print("Enter email: ");
+            email = scanner.nextLine();
+
+            // validate email format
+            if (email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
+
+                System.out.println("Valid email");
+                break;
+
+            } else {
+                System.out.println("Invalid email.");
+
+            }
+        }
+
+        // sentence processing
+
+        // ask user to enter a sentence
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+
+        // count vowels
+        int vowelCount = 0;
+
+        for (int i = 0; i < sentence.length(); i++) {
+
+            char ch = Character.toLowerCase(sentence.charAt(i));
+
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+
+                vowelCount++;
+
+            }
+        }
+
+        System.out.println("Number of vowels: " + vowelCount);
+
+        // reverse sentence
+        StringBuilder sb = new StringBuilder(sentence);
+        System.out.println("Reversed sentence: " + sb.reverse());
+
+        // replace all digits in sentence with *
+        String replacedSentence = sentence.replaceAll("\\d","*");
+
+        System.out.println("Digits replaced: " + replacedSentence);
+
+
+
+
+
+
+    }
+}
