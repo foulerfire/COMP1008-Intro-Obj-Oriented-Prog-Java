@@ -105,7 +105,19 @@ public static void main(String[] args) {
 
         System.out.println("Digits replaced: " + replacedSentence);
 
+        // tokenizing
 
+        // create course list
+        String courses = "Math,Science,Java,English";
+
+        // split string by comma
+        String[] courseArray = courses.split(",");
+
+        System.out.println("Courses:");
+
+        for (String course : courseArray) {
+            System.out.println(course);
+        }
 
 
 
