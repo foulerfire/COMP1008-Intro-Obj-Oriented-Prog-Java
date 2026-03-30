@@ -1,3 +1,4 @@
+
 //STARTER CODE
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -7,7 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
- 
+
 public class CalculatorApp extends Application {
  
     @Override
@@ -17,13 +18,13 @@ public class CalculatorApp extends Application {
         TextField input1 = new TextField();
         TextField input2 = new TextField();
 
-        Label resultLabel = new Label("Result: ");
 
-        VBox mainLayout = new VBox(10);
-        mainLayout.getChildren().addAll(input1, input2, resultLabel);
  
         // Step 2: Create Buttons for operations
-        
+        Button addBtn = new Button("+");
+        Button subBtn = new Button("-");
+        Button mulBtn = new Button("*");
+        Button divBtn = new Button("/");
  
         // Step 3: Create Label for result
        
