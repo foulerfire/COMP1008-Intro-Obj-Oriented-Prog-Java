@@ -17,8 +17,6 @@ public class CalculatorApp extends Application {
         // Step 1: Create TextFields for input
         TextField input1 = new TextField();
         TextField input2 = new TextField();
-
-
  
         // Step 2: Create Buttons for operations
         Button addBtn = new Button("+");
@@ -38,7 +36,61 @@ public class CalculatorApp extends Application {
         mainLayout.getChildren().addAll(input1, input2, buttonLayout, resultLabel);
 
         // Step 6: Event handling for buttons
-       
+        // ADD
+        addBtn.setOnAction(e -> {
+            try {
+                double num1 = Double.parseDouble(input1.getText());
+                double num2 = Double.parseDouble(input2.getText());
+                resultLabel.setText("Result: " + (num1 + num2));
+            } catch (Exception ex) {
+                resultLabel.setText("Invalid input!");
+            }
+        });
+
+
+        // SUBTRACT
+        subBtn.setOnAction(e -> {
+            try {
+                double num1 = Double.parseDouble(input1.getText());
+                double num2 = Double.parseDouble(input2.getText());
+                resultLabel.setText("Result: " + (num1 - num2));
+            } catch (Exception ex) {
+                resultLabel.setText("Invalid input!");
+            }
+        });
+
+
+        // MULTIPLY
+        mulBtn.setOnAction(e -> {
+            try {
+                double num1 = Double.parseDouble(input1.getText());
+                double num2 = Double.parseDouble(input2.getText());
+                resultLabel.setText("Result: " + (num1 * num2));
+            } catch (Exception ex) {
+                resultLabel.setText("Invalid input!");
+            }
+        });
+
+
+        // DIVIDE
+        divBtn.setOnAction(e -> {
+            try {
+                double num1 = Double.parseDouble(input1.getText());
+                double num2 = Double.parseDouble(input2.getText());
+
+
+                if (num2 == 0) {
+                    resultLabel.setText("Error: Division by zero");
+                } else {
+                    resultLabel.setText("Result: " + (num1 / num2));
+                }
+
+
+            } catch (Exception ex) {
+                resultLabel.setText("Invalid input!");
+            }
+        });
+
         // Step 7: Create scene and show stage
        
     }
