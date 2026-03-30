@@ -14,7 +14,13 @@ public class CalculatorApp extends Application {
     public void start(Stage primaryStage) {
  
         // Step 1: Create TextFields for input
-        
+        TextField input1 = new TextField();
+        TextField input2 = new TextField();
+
+        Label resultLabel = new Label("Result: ");
+
+        VBox mainLayout = new VBox(10);
+        mainLayout.getChildren().addAll(input1, input2, resultLabel);
  
         // Step 2: Create Buttons for operations
         
